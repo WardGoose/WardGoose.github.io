@@ -20,7 +20,7 @@ response = requests.get(
 )
 data = response.json()
 
-with open('../history.json', 'w', encoding='utf-8') as file:
+with open('py/data/history.json', 'w', encoding='utf-8') as file:
     json.dump(data, file, ensure_ascii=False, indent=4)
 
 # # price_load
