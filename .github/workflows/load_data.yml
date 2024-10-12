@@ -16,10 +16,10 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v4
       with:
         python-version: '3.x'
         
@@ -31,11 +31,13 @@ jobs:
     - name: Run Python script
       run: python py/multi_price.py
 
-# Git Push
+    # Git Push
     - name: Commit and push changes
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "49699333+dependabot[bot]@users.noreply.github.com"
         git add -A
-        git commit -m "(update) auto_data_load"
+        git commit -m "(update) auto_data_load" || echo "No changes to commit"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
