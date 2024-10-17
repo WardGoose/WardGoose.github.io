@@ -23,9 +23,9 @@ data = response.json()
 with open('../history.json', 'w', encoding='utf-8') as file:
     json.dump(data, file, ensure_ascii=False, indent=4)
 
-# # price_load
-#     data1 = data['pairs']
-#     for i in data1:
-#         result = i['labels']
-#         if 'v3' in result:
-#             print(i['priceUsd'])
+# price_load
+    data1 = data['pairs']
+    for i in data1:
+        result = i['labels']
+        if 'v2' in result: # v2, v3
+            print(i['priceUsd'])
