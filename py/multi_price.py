@@ -20,12 +20,21 @@ response = requests.get(
 )
 data = response.json()
 
-with open('../history.json', 'w', encoding='utf-8') as file:
+with open('py/data/history.json', 'w', encoding='utf-8') as file:
     json.dump(data, file, ensure_ascii=False, indent=4)
 
+<<<<<<< HEAD
 # price_load
     data1 = data['pairs']
     for i in data1:
         result = i['labels']
         if 'v2' in result: # v2, v3
             print(i['priceUsd'])
+=======
+# # price_load
+#     data1 = data['pairs']
+#     for i in data1:
+#         result = i['labels']
+#         if 'v3' in result:
+#             print(i['priceUsd'])
+>>>>>>> 4aebed65afcb832c3784d0d73f206bd6c316d55a
