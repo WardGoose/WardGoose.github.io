@@ -1,14 +1,14 @@
 name: Fetch Price info
 
-# on:
-#     schedule:
-#       - cron: '0 0 * * *' # 한국시간 오전 9~10시에 실행
+on:
+    schedule:
+      - cron: '30 * * * *' # 30분
 
 # 이후 데이터 업데이트 필요시 cron 수정
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   fetch-info:
@@ -29,7 +29,10 @@ jobs:
         pip install requests
 
     - name: Run Python script
-      run: python py/multi_price.py
+      run: python coin/multi_price.py
+
+    - name: Run Python script
+      run: python x/load_x_script.py
 
     # Git Push
     - name: Commit and push changes
