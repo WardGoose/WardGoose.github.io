@@ -27,10 +27,12 @@ for filename, token in API_URLS.items():
 
     with open(f'coin/data/{filename}.json', 'w', encoding='utf-8') as file:
         json.dump(data, file, ensure_ascii=False, indent=4)
-
-    # price_load
+    if filename == 'moodengeth':
         data1 = data['pairs']
         for i in data1:
             result = i['labels']
             if 'v3' in result:  # v2가 있는지 확인
                 print(f"Symbol: {i['baseToken']['symbol']}, Price: {i.get('priceUsd', 'N/A')}")
+    elif filename == 'moodengsol':
+        data1 = data['pairs'][0]
+        print(f"Symbol: {data1['baseToken']['symbol']}, Price: {data1.get('priceUsd', 'N/A')}")
