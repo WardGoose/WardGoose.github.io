@@ -7,8 +7,8 @@ from datetime import datetime
 import time
 
 user_id = {
-    'Moodengeth' : 'moodengctoeth',
-    'Moodengsol' : 'moodengsol'
+    'moodengeth' : 'moodengctoeth',
+    'moodengsol' : 'moodengsol'
 }
 
 def load_x_data():
