@@ -15,7 +15,7 @@ import json
 
 API_URLS = {
     'moodengeth': f"0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad",
-    'moodengsol': f'22WrmyTj8x2TRVQen3fxxi2r4Rn6JDHWoMTpsSmn8RUd'
+    'moodengsol': f'ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY'
 }
 
 for filename, token in API_URLS.items():

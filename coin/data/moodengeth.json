@@ -1,1 +1,161 @@
-
+{
+    "schemaVersion": "1.0.0",
+    "pairs": [
+        {
+            "chainId": "ethereum",
+            "dexId": "uniswap",
+            "url": "https://dexscreener.com/ethereum/0x470dc172d6502ac930b59322ece5345dd456a03d",
+            "pairAddress": "0x470DC172d6502Ac930B59322EcE5345dd456A03D",
+            "labels": [
+                "v2"
+            ],
+            "baseToken": {
+                "address": "0x28561B8A2360F463011c16b6Cc0B0cbEF8dbBcad",
+                "name": "MOO DENG",
+                "symbol": "MOODENG"
+            },
+            "quoteToken": {
+                "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "name": "Wrapped Ether",
+                "symbol": "WETH"
+            },
+            "priceNative": "0.00000002383",
+            "priceUsd": "0.00006425",
+            "txns": {
+                "m5": {
+                    "buys": 1,
+                    "sells": 3
+                },
+                "h1": {
+                    "buys": 42,
+                    "sells": 36
+                },
+                "h6": {
+                    "buys": 274,
+                    "sells": 226
+                },
+                "h24": {
+                    "buys": 484,
+                    "sells": 467
+                }
+            },
+            "volume": {
+                "h24": 1589310.76,
+                "h6": 925997.45,
+                "h1": 127101.86,
+                "m5": 2557.69
+            },
+            "priceChange": {
+                "m5": -0.35,
+                "h1": -1.35,
+                "h6": -13.52,
+                "h24": -14.76
+            },
+            "liquidity": {
+                "usd": 1184143.17,
+                "base": 9214327453,
+                "quote": 219.6608
+            },
+            "fdv": 26634442,
+            "marketCap": 26634442,
+            "pairCreatedAt": 1726431167000,
+            "info": {
+                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad.png",
+                "websites": [
+                    {
+                        "label": "Website",
+                        "url": "https://moodeng.vip/"
+                    }
+                ],
+                "socials": [
+                    {
+                        "type": "twitter",
+                        "url": "https://x.com/moodengctoeth"
+                    },
+                    {
+                        "type": "telegram",
+                        "url": "https://t.me/moodengethcto"
+                    }
+                ]
+            }
+        },
+        {
+            "chainId": "ethereum",
+            "dexId": "uniswap",
+            "url": "https://dexscreener.com/ethereum/0x5552727005cc8194c1559289a532deb288964fd8",
+            "pairAddress": "0x5552727005cc8194c1559289A532DEb288964FD8",
+            "labels": [
+                "v3"
+            ],
+            "baseToken": {
+                "address": "0x28561B8A2360F463011c16b6Cc0B0cbEF8dbBcad",
+                "name": "MOO DENG",
+                "symbol": "MOODENG"
+            },
+            "quoteToken": {
+                "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+                "name": "Wrapped Ether",
+                "symbol": "WETH"
+            },
+            "priceNative": "0.00000002348",
+            "priceUsd": "0.00006329",
+            "txns": {
+                "m5": {
+                    "buys": 1,
+                    "sells": 0
+                },
+                "h1": {
+                    "buys": 17,
+                    "sells": 11
+                },
+                "h6": {
+                    "buys": 100,
+                    "sells": 59
+                },
+                "h24": {
+                    "buys": 188,
+                    "sells": 126
+                }
+            },
+            "volume": {
+                "h24": 1000164.33,
+                "h6": 489531.21,
+                "h1": 56474.5,
+                "m5": 1520.32
+            },
+            "priceChange": {
+                "m5": 0.03,
+                "h1": -2.83,
+                "h6": -14.72,
+                "h24": -15.61
+            },
+            "liquidity": {
+                "usd": 896392.91,
+                "base": 13153772560,
+                "quote": 23.7042
+            },
+            "fdv": 26234394,
+            "marketCap": 26234394,
+            "pairCreatedAt": 1726645835000,
+            "info": {
+                "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad.png",
+                "websites": [
+                    {
+                        "label": "Website",
+                        "url": "https://moodeng.vip/"
+                    }
+                ],
+                "socials": [
+                    {
+                        "type": "twitter",
+                        "url": "https://x.com/moodengctoeth"
+                    },
+                    {
+                        "type": "telegram",
+                        "url": "https://t.me/moodengethcto"
+                    }
+                ]
+            }
+        }
+    ]
+}
