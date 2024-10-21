@@ -19,45 +19,45 @@
                 "name": "Wrapped Ether",
                 "symbol": "WETH"
             },
-            "priceNative": "0.00000002422",
-            "priceUsd": "0.00006480",
+            "priceNative": "0.00000002411",
+            "priceUsd": "0.00006450",
             "txns": {
                 "m5": {
-                    "buys": 2,
-                    "sells": 0
+                    "buys": 1,
+                    "sells": 1
                 },
                 "h1": {
                     "buys": 7,
-                    "sells": 5
+                    "sells": 10
                 },
                 "h6": {
-                    "buys": 118,
-                    "sells": 90
+                    "buys": 107,
+                    "sells": 84
                 },
                 "h24": {
-                    "buys": 526,
-                    "sells": 459
+                    "buys": 530,
+                    "sells": 464
                 }
             },
             "volume": {
-                "h24": 1748044.39,
-                "h6": 370577.55,
-                "h1": 28040.02,
-                "m5": 2835.37
+                "h24": 1760921.55,
+                "h6": 353077.93,
+                "h1": 20357.64,
+                "m5": 2496.88
             },
             "priceChange": {
-                "m5": 0.98,
-                "h1": 1.69,
-                "h6": 1.44,
-                "h24": -14.04
+                "m5": -0.7,
+                "h1": 0.19,
+                "h6": 2.02,
+                "h24": -13.98
             },
             "liquidity": {
-                "usd": 1185883.73,
-                "base": 9149598806,
-                "quote": 221.6701
+                "usd": 1183185.94,
+                "base": 9171263796,
+                "quote": 221.1715
             },
-            "fdv": 26862293,
-            "marketCap": 26862293,
+            "fdv": 26737872,
+            "marketCap": 26737872,
             "pairCreatedAt": 1726431167000,
             "info": {
                 "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad.png",
@@ -97,20 +97,20 @@
                 "name": "Wrapped Ether",
                 "symbol": "WETH"
             },
-            "priceNative": "0.00000002406",
-            "priceUsd": "0.00006436",
+            "priceNative": "0.00000002403",
+            "priceUsd": "0.00006429",
             "txns": {
                 "m5": {
                     "buys": 1,
                     "sells": 0
                 },
                 "h1": {
-                    "buys": 5,
-                    "sells": 0
+                    "buys": 1,
+                    "sells": 1
                 },
                 "h6": {
-                    "buys": 57,
-                    "sells": 31
+                    "buys": 45,
+                    "sells": 27
                 },
                 "h24": {
                     "buys": 213,
@@ -118,24 +118,24 @@
                 }
             },
             "volume": {
-                "h24": 998322.72,
-                "h6": 206180.7,
-                "h1": 10531.56,
-                "m5": 5349.76
+                "h24": 996145.58,
+                "h6": 178527.64,
+                "h1": 996.51,
+                "m5": 22.21
             },
             "priceChange": {
-                "m5": 0.57,
-                "h1": 1.69,
-                "h6": 1.61,
-                "h24": -14.79
+                "m5": -0.13,
+                "h1": -0.11,
+                "h6": 1.53,
+                "h24": -14.97
             },
             "liquidity": {
-                "usd": 910038.91,
-                "base": 12806349147,
-                "quote": 32.08393
+                "usd": 909164.79,
+                "base": 12821287004,
+                "quote": 31.7284
             },
-            "fdv": 26677790,
-            "marketCap": 26677790,
+            "fdv": 26649259,
+            "marketCap": 26649259,
             "pairCreatedAt": 1726645835000,
             "info": {
                 "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/ethereum/0x28561b8a2360f463011c16b6cc0b0cbef8dbbcad.png",
