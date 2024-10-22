@@ -2,7 +2,7 @@ name: Fetch Price info
 
 on:
   schedule:
-    - cron: '30 * * * *' # 30분
+    - cron: '*/15 * * * *' # 30분
 
 # 이후 데이터 업데이트 필요시 cron 수정
 # on:
