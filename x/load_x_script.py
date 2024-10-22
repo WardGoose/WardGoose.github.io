@@ -39,7 +39,7 @@ def load_x_data():
             current_time = datetime.now().strftime('%Y-%m-%d %H:%M')
             
             # 결과를 'YYYY-MM-DD HH:MM result' 형식으로 저장
-            result = f"{current_time} {followers_info}\n"
+            result = f"{current_time} {followers_info.replace(',','')}\n"
         
             # 결과를 파일에 저장
             with open(f'x/data/{filename}.txt', 'a', encoding='utf-8') as f:

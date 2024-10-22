@@ -34,7 +34,7 @@ function updateChart(labels, dataPoints) {
         data: {
             labels: labels,  // X축 라벨 (날짜 + 시간)
             datasets: [{
-                label: 'Value',
+                label: '',
                 data: dataPoints,  // Y축 데이터 (값)
                 borderColor: 'rgba(75, 192, 192, 1)',
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
@@ -50,16 +50,42 @@ function updateChart(labels, dataPoints) {
             scales: {
                 x: {
                     title: {
-                        display: true,
-                        text: 'Date & Time'
+                        display: false,
+                        text: ''
                     }
                 },
                 y: {
                     title: {
-                        display: true,
-                        text: 'Value'
+                        display: false,
+                        text: ''
                     },
-                    beginAtZero: false
+                    beginAtZero: false,
+                    ticks: {
+                        callback: function(value) {
+                            if (value >= 1) {
+                                // 1 이상인 값은 소수점 없이 표시
+                                return value.toLocaleString();  // 천 단위 콤마 추가
+                            } else {
+                                // 1 미만인 값은 소수점 6자리까지 표시
+                                return value.toFixed(8);  // 일반 숫자 형식으로 표시
+                            }
+                        }
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            let value = tooltipItem.raw;
+                            // 값이 1 이상일 때는 소수점 없이, 1 미만일 때는 소수점 6자리까지 표시
+                            if (value >= 1) {
+                                return `Value: ${value.toLocaleString()}`;
+                            } else {
+                                return `Value: ${value.toFixed(8)}`;
+                            }
+                        }
+                    }
                 }
             }
         }
