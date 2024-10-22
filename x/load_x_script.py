@@ -42,7 +42,7 @@ def load_x_data():
             result = f"{current_time} {followers_info}\n"
         
             # 결과를 파일에 저장
-            with open(f'x/data/{filename}.txt', 'a') as f:
+            with open(f'x/data/{filename}.txt', 'a', encoding='utf-8') as f:
                 f.write(result)
 
             time.sleep(2)

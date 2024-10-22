@@ -28,7 +28,7 @@ for filename, token in API_URLS.items():
 
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M')
     
-    with open(f'coin/data/{filename}.txt', 'w', encoding='utf-8') as file:
+    with open(f'coin/data/{filename}.txt', 'a', encoding='utf-8') as file:
         # json.dump(data, file, ensure_ascii=False, indent=4) # json 전체내용 저장
         if filename == 'moodengeth':
             data1 = data['pairs']
