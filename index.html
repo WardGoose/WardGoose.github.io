@@ -11,13 +11,22 @@
     <div class="container">
         <h1>Dropdown to Select Data for Chart</h1>
         
-        <!-- 드롭다운 메뉴 -->
-        <select id="fileSelect">
-            <option value="x/data/moodengeth.txt">MoodengEth X</option>
-            <option value="x/data/moodengsol.txt">MoodengSOL X</option>
-            <option value="coin/data/moodengeth.txt">MoodengEth coin</option>
-            <option value="coin/data/moodengsol.txt">MoodengSOL coin</option>
-        </select>
+        <div class="select-container">
+            <select id="fileSelect">
+                <option value="x/data/moodengeth.txt">MoodengEth X</option>
+                <option value="x/data/moodengsol.txt">MoodengSOL X</option>
+                <option value="coin/data/moodengeth.txt">MoodengEth coin</option>
+                <option value="coin/data/moodengsol.txt">MoodengSOL coin</option>
+            </select>
+    
+            <select id="dataCountSelect">
+                <option value="10">최근 10개</option>
+                <option value="20">최근 20개</option>
+                <option value="30">최근 30개</option>
+                <option value="50">최근 50개</option>
+                <option value="100">최근 100개</option>
+            </select>
+        </div>
 
         <!-- 차트를 표시할 캔버스 -->
         <canvas id="myChart"></canvas>

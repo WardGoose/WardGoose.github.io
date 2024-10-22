@@ -2,7 +2,7 @@
 let myChart = null;
 
 // 데이터를 불러오는 함수
-async function fetchData(filePath) {
+async function fetchData(filePath, dataCount) {
     const response = await fetch(filePath);
     const text = await response.text();
     const lines = text.trim().split('\n');
@@ -16,7 +16,11 @@ async function fetchData(filePath) {
         dataPoints.push(parseFloat(value));
     });
     
-    return { labels, dataPoints };
+    // 최근 데이터 개수에 맞춰 자르기
+    const recentLabels = labels.slice(-dataCount);
+    const recentDataPoints = dataPoints.slice(-dataCount);
+    
+    return { labels: recentLabels, dataPoints: recentDataPoints };
 }
 
 // 차트를 생성하거나 업데이트하는 함수
@@ -95,13 +99,23 @@ function updateChart(labels, dataPoints) {
 // 드롭다운 선택에 따라 차트를 업데이트하는 함수
 document.getElementById('fileSelect').addEventListener('change', async function() {
     const selectedFile = this.value;  // 선택된 파일 경로
-    const { labels, dataPoints } = await fetchData(selectedFile);  // 데이터를 가져옴
+    const dataCount = document.getElementById('dataCountSelect').value;  // 선택된 데이터 개수
+    const { labels, dataPoints } = await fetchData(selectedFile, dataCount);  // 데이터를 가져옴
     updateChart(labels, dataPoints);  // 차트 업데이트
 });
 
-// 초기 로드 시 기본 파일로 차트 생성
+// 데이터 개수 선택 드롭다운 변경 시 차트를 업데이트하는 함수
+document.getElementById('dataCountSelect').addEventListener('change', async function() {
+    const selectedFile = document.getElementById('fileSelect').value;  // 현재 선택된 파일
+    const dataCount = this.value;  // 선택된 데이터 개수
+    const { labels, dataPoints } = await fetchData(selectedFile, dataCount);  // 데이터를 가져옴
+    updateChart(labels, dataPoints);  // 차트 업데이트
+});
+
+// 초기 로드 시 기본 파일과 데이터 개수로 차트 생성
 window.onload = async function() {
-    const defaultFile = document.getElementById('fileSelect').value;  // 기본 파일 (a.txt)
-    const { labels, dataPoints } = await fetchData(defaultFile);  // 데이터를 가져옴
+    const defaultFile = document.getElementById('fileSelect').value;  // 기본 파일
+    const dataCount = document.getElementById('dataCountSelect').value;  // 기본 데이터 개수
+    const { labels, dataPoints } = await fetchData(defaultFile, dataCount);  // 데이터를 가져옴
     updateChart(labels, dataPoints);  // 차트 생성
 };
