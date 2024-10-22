@@ -31,10 +31,10 @@ select {
 /* 모바일 대응을 위한 미디어 쿼리 */
 @media (max-width: 600px) {
     h1 {
-        font-size: 1.2em;  /* 모바일에서의 폰트 크기 */
+        font-size: 1em;  /* 모바일에서의 폰트 크기 */
     }
 
     select {
-        font-size: 14px;  /* 모바일에서의 드롭다운 폰트 크기 */
+        font-size: 5px;  /* 모바일에서의 드롭다운 폰트 크기 */
     }
 }
