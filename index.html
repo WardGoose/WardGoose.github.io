@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Chart Example</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dropdown to Select Data for Chart</h1>
+        
+        <!-- 드롭다운 메뉴 -->
+        <select id="fileSelect">
+            <option value="x/data/moodengeth.txt">MoodengEth X</option>
+            <option value="x/data/moodengsol.txt">MoodengSOL X</option>
+            <option value="coin/data/moodengeth.txt">MoodengEth coin</option>
+            <option value="coin/data/moodengsol.txt">MoodengSOL coin</option>
+        </select>
+
+        <!-- 차트를 표시할 캔버스 -->
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
