@@ -36,14 +36,14 @@ for filename, token in API_URLS.items():
                 result = i['labels']
                 if 'v3' in result:  # v3가 있는지 확인 , json 내용엔 v2 도 있음
                     result = f"{current_time} {i.get('priceUsd', 'N/A')}\n"
-                    # file.write(result)
+                    file.write(result)
 
                     # print(f"Symbol: {i['baseToken']['symbol']}, Price: {i.get('priceUsd', 'N/A')}") # 단순 결과 출력
 
         elif filename == 'moodengsol':
             data1 = data['pairs'][0]
             result = f"{current_time} {data1.get('priceUsd', 'N/A')}\n"
-            # file.write(result)
+            file.write(result)
 
             # print(f"Symbol: {data1['baseToken']['symbol']}, Price: {data1.get('priceUsd', 'N/A')}") # 단순 결과 출력
 
