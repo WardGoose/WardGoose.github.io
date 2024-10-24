@@ -52,7 +52,7 @@ def load_x_data():
             result = f"{current_time} 0\n"
             with open(f'x/data/{filename}.txt', 'a', encoding='utf-8') as f:
                 f.write(result)
-
+            time.sleep(2)
     finally:
         # 브라우저 닫기
         driver.quit()
