@@ -28,12 +28,31 @@ for filename, token in API_URLS.items():
 
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M')
     
+    # MarketCap
+    with open(f'coin/data/{filename}cap.txt', 'a', encoding='utf-8') as file:
+        # json.dump(data, file, ensure_ascii=False, indent=4) # json 전체내용 저장
+        if filename == 'moodengeth':
+            data1 = data['pairs']
+            for i in data1:
+                result = i['labels']
+                if 'v3' in result:
+                    result = f"{current_time} {i.get('marketCap', 'N/A')}\n"
+                    file.write(result)
+
+                    # print(f"Symbol: {i['baseToken']['symbol']}, Price: {i.get('priceUsd', 'N/A')}, MarketCap: , MarketCap: ${i.get('marketCap', 'N/A')}") # 단순 결과 출력
+        elif filename == 'moodengsol':
+            data1 = data['pairs'][0]
+            result = f"{current_time} {data1.get('marketCap', 'N/A')}\n"
+            file.write(result)
+
+
     with open(f'coin/data/{filename}.txt', 'a', encoding='utf-8') as file:
         # json.dump(data, file, ensure_ascii=False, indent=4) # json 전체내용 저장
         if filename == 'moodengeth':
             data1 = data['pairs']
             for i in data1:
                 result = i['labels']
+                cap = i['marketCap']
                 if 'v3' in result:  # v3가 있는지 확인 , json 내용엔 v2 도 있음
                     result = f"{current_time} {i.get('priceUsd', 'N/A')}\n"
                     file.write(result)
@@ -42,6 +61,7 @@ for filename, token in API_URLS.items():
 
         elif filename == 'moodengsol':
             data1 = data['pairs'][0]
+            cap = f"{current_time} {data1.get('marketCap', 'N/A')}\n"
             result = f"{current_time} {data1.get('priceUsd', 'N/A')}\n"
             file.write(result)
 
