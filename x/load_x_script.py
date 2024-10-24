@@ -47,6 +47,8 @@ def load_x_data():
 
             time.sleep(2)
         except:
+            # 현재 시간 정보를 가져와 'YYYY-MM-DD HH:MM' 형식으로 저장
+            current_time = datetime.now().strftime('%Y-%m-%d %H:%M')
             result = f"{current_time} 0\n"
             with open(f'x/data/{filename}.txt', 'a', encoding='utf-8') as f:
                 f.write(result)
